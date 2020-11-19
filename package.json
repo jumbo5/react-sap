@@ -1,55 +1,95 @@
 {
-  "name": "react-sap",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.53",
-    "@types/react-dom": "^16.9.8",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
-    "typescript": "^4.0.3",
-    "web-vitals": "^0.2.4"
-  },
+  "name": "@vgr/storybooks-dwa",
+  "version": "1.0.0",
+  "description": "Components kit for DWA",
+  "files": [
+    "dist"
+  ],
+  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "start": "npm run storybook",
+    "storybook": "start-storybook -p 9009 -s static",
+    "build-storybook": "build-storybook -s static",
+    "lint": "eslint --ext .ts,.tsx \"src/**/*\"",
+    "lint:fix": "npm run lint --fix",
+    "build": "rm -rf dist && rollup -c",
+    "format": "prettier --write \"{src,tests}/**/*.{js,ts,tsx,jsx}\"",
+    "prepare": "rollup -c",
+    "publish": "NODE_OPTIONS=--max_old_space_size=4096 build-storybook -c .storybook -o dist -s static --quiet",
+    "tbuild": "tsdx build --name dwa-storybook --format=cjs,esm,umd"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "styled-components": "^5.1.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@babel/runtime": "^7.9.6",
+    "@types/styled-components": "^5.1.4",
+    "react-spring": "^9.0.0-rc.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@storybook/addon-actions": "^6.1.0",
-    "@storybook/addon-essentials": "^6.1.0",
-    "@storybook/addon-links": "^6.1.0",
-    "@storybook/node-logger": "^6.1.0",
-    "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "^6.1.0",
-    "babel-loader": "^8.2.1"
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-image": "^2.0.5",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "@rollup/plugin-url": "^5.0.0",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/addon-info": "^5.3.18",
+    "@storybook/addon-knobs": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-storysource": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "@svgr/rollup": "^5.4.0",
+    "@typescript-eslint/eslint-plugin": "^3.0.0",
+    "@typescript-eslint/parser": "^3.0.0",
+    "@wessberg/rollup-plugin-ts": "^1.2.29",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "babel-preset-react-app": "^9.1.2",
+    "css-loader": "^3.5.3",
+    "csstype": "^2.6.10",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-typescript": "^7.2.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-better-styled-components": "^1.1.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.2",
+    "file-loader": "^6.0.0",
+    "hoist-non-react-statics": "^3.3.2",
+    "husky": "^4.2.5",
+    "image-webpack-loader": "^6.0.0",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "rollup": "^2.10.5",
+    "rollup-plugin-postcss": "^3.1.1",
+    "rollup-plugin-progress": "^1.1.2",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "styled-components": "^5.1.0",
+    "ts-loader": "^7.0.4",
+    "ts-toolbelt": "^6.8.9",
+    "tslib": "^2.0.0",
+    "typescript": "3.8.2",
+    "typescript-plugin-styled-components": "^1.4.4",
+    "typescript-styled-plugin": "^0.15.0",
+    "url-loader": "^4.1.0"
   }
 }
