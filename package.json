@@ -92,5 +92,13 @@
     "typescript-plugin-styled-components": "^1.4.4",
     "typescript-styled-plugin": "^0.15.0",
     "url-loader": "^4.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jumbo5/react-sap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jumbo5/react-sap/issues"
+  },
+  "homepage": "https://github.com/jumbo5/react-sap#readme"
 }
