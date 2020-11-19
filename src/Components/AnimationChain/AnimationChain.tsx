@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 
-import { DEFAULT_DELAY, DEFAULT_DURATION } from '../configs'
-import { AnimationChainProps } from '../Animation/types'
+import { DEFAULT_DELAY, DEFAULT_DURATION } from '../../constants'
+import { AnimationChainProps } from '../../types'
 
 type childrenDelay = { delay: number; duration: number }
 

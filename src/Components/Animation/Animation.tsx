@@ -1,8 +1,9 @@
 import React from 'react'
 import { animated, useSpring } from 'react-spring'
 
-import { animations, DEFAULT_DELAY, DEFAULT_DURATION } from '../configs'
-import { AnimationProps } from '../types'
+import { saps } from '../../configs'
+import { DEFAULT_DELAY, DEFAULT_DURATION } from '../../constants'
+import { AnimationProps } from '../../types'
 
 export const Animation: React.FC<AnimationProps> = ({
   children,
@@ -18,7 +19,7 @@ export const Animation: React.FC<AnimationProps> = ({
       duration: DEFAULT_DURATION,
       ...config,
     },
-    ...(customAnimation || animations[type]),
+    ...(customAnimation || saps[type]),
   })
 
   return (
