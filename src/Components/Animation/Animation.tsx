@@ -6,8 +6,7 @@ import { DEFAULT_DELAY, DEFAULT_DURATION } from '../../constants'
 import { AnimationProps } from '../../types'
 
 export const Animation: React.FC<AnimationProps> = ({
-  children,
-  className,
+  children, className,
   type = 'fade-in-bottom',
   config,
   delay = DEFAULT_DELAY,
