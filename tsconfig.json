@@ -36,8 +36,5 @@
       ]
     },
   },
-  "include": [
-    "src",
-    "types"
-  ]
+  "include": ["src"]
 }
