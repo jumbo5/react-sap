@@ -19,8 +19,7 @@
     "build": "rm -rf dist && rollup -c",
     "format": "prettier --write \"{src,tests}/**/*.{js,ts,tsx,jsx}\"",
     "prepare": "rollup -c",
-    "publish": "NODE_OPTIONS=--max_old_space_size=4096 build-storybook -c .storybook -o dist -s static --quiet",
-    "tbuild": "tsdx build --name dwa-storybook --format=cjs,esm,umd"
+    "publish": "NODE_OPTIONS=--max_old_space_size=4096 build-storybook -c .storybook -o dist -s static --quiet"
   },
   "keywords": [],
   "author": "",
@@ -45,7 +44,7 @@
     "@storybook/addon-info": "^5.3.18",
     "@storybook/addon-knobs": "^5.3.18",
     "@storybook/addon-links": "^6.1.1",
-    "@storybook/addon-storysource": "^5.3.18",
+    "@storybook/addon-storysource": "^5.3.21",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^6.1.1",
     "@svgr/rollup": "^5.4.0",

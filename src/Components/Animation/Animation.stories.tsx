@@ -20,33 +20,37 @@ const Container = styled.div`
   }
 `;
 
-storiesOf('Animation', module).add('Default', () => (
-  <Container>
-    <Animation type="fade-in-bottom" className="custom-classname">
-      <b>FADE IN BOTTOM EXAMPLE</b>
-    </Animation>
+storiesOf('Animation', module)
+  .add('Default', () => (
+    <Container>
+      <Animation type="fade-in-bottom" className="custom-classname">
+        <b>FADE IN BOTTOM EXAMPLE</b>
+      </Animation>
 
-    <Animation type="fade-in-top" className="custom-classname">
-      <b>FADE IN TOP EXAMPLE</b>
-    </Animation>
+      <Animation type="fade-in-top" className="custom-classname">
+        <b>FADE IN TOP EXAMPLE</b>
+      </Animation>
 
-    <Animation
-      className="custom-classname"
-      customAnimation={{
-        from: { transform: 'rotate(720deg)', opacity: 0 },
-        to: { transform: 'rotate(-720deg)', opacity: 1 },
-      }}
-      config={{ duration: 2000 }}
-    >
-      <b>CUSTOM ANIMATION</b>
-    </Animation>
+      <Animation type="fade-in-left" className="custom-classname">
+        <b>FADE IN LEFT EXAMPLE</b>
+      </Animation>
 
-    <Animation type="fade-in-left" className="custom-classname">
-      <b>FADE IN LEFT EXAMPLE</b>
-    </Animation>
-
-    <Animation type="fade-in-right" className="custom-classname">
-      <b>FADE IN RIGHT EXAMPLE</b>
-    </Animation>
-  </Container>
-));
+      <Animation type="fade-in-right" className="custom-classname">
+        <b>FADE IN RIGHT EXAMPLE</b>
+      </Animation>
+    </Container>
+  ))
+  .add('Custom', () => (
+    <Container>
+      <Animation
+        className="custom-classname"
+        customAnimation={{
+          from: { transform: 'rotate(720deg)', opacity: 0 },
+          to: { transform: 'rotate(-720deg)', opacity: 1 },
+        }}
+        config={{ duration: 2000 }}
+      >
+        <b>CUSTOM ANIMATION</b>
+      </Animation>
+    </Container>
+  ));
