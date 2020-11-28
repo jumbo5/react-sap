@@ -1,12 +1,13 @@
-import React from 'react'
-import { animated, useSpring } from 'react-spring'
+import React from 'react';
+import { animated, useSpring } from 'react-spring';
 
-import { saps } from '../../configs'
-import { DEFAULT_DELAY, DEFAULT_DURATION } from '../../constants'
-import { AnimationProps } from '../../types'
+import { saps } from '../../configs';
+import { DEFAULT_DELAY, DEFAULT_DURATION } from '../../constants';
+import { AnimationProps } from '../../types';
 
 export const Animation: React.FC<AnimationProps> = ({
-  children, className,
+  children,
+  className,
   type = 'fade-in-bottom',
   config,
   delay = DEFAULT_DELAY,
@@ -19,11 +20,11 @@ export const Animation: React.FC<AnimationProps> = ({
       ...config,
     },
     ...(customAnimation || saps[type]),
-  })
+  });
 
   return (
     <animated.div style={springProps} className={className}>
       {children}
     </animated.div>
-  )
-}
+  );
+};

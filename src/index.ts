@@ -1,3 +1,3 @@
-export * from './Components/Animation'
-export * from './Components/AnimationChain'
-export * from './configs'
+export * from './Components/Animation';
+export * from './Components/AnimationChain';
+export * from './configs';

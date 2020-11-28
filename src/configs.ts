@@ -1,4 +1,4 @@
-import { animationTypes } from './types'
+import { animationTypes } from './types';
 
 export const saps: { [key in animationTypes]: object } = {
   'fade-in-bottom': {
@@ -17,4 +17,4 @@ export const saps: { [key in animationTypes]: object } = {
     from: { transform: 'translateX(100%)', opacity: 0 },
     to: { transform: 'translateX(0%)', opacity: 1 },
   },
-}
+};

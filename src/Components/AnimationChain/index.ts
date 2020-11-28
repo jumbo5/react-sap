@@ -1,1 +1,1 @@
-export * from './AnimationChain'
+export * from './AnimationChain';
